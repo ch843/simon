@@ -22,25 +22,90 @@
     </header>
     <main>
         <div>
-            <p>Player: Player Name</p>
+            <div class="players">
+                Player:
+                <span class="player-name">Player 1</span>
+            </div>
+
+            <br />
+
+            <div>
             <label for="text">Score: </label>
-            <input type="number" id="text" placeholder="--" />
-            <button type="submit">Reset</button>
+            <input type="number" id="text" value="--" readonly/>
+            </div>
+
+            <br />
+
+            <div>
+                <button type="submit">Reset</button>
+            </div>
+
+            <br />
         </div>
-        <div>
-            <svg viewBox="0 0 100 100">
-                <!-- <rect x="10" y="10" width="10" height="10" fill = "none" style="border: 1px solid #000000"/>-->
-                <!--<circle cx="5" cy="5" r="25%" fill="green" stroke = "green"/>-->
-                <!--M is starting pt, L is line, A is arch: radius or arch, radius of arch, rotation angle, 
-                large-arc flag, sweep-flag, and end point of arch-->
-                <path d="M 50 50 L 50 10 A 40 40 0 0 1 90 50 L 50 50" fill="green" stroke="green" />
-            </svg>
+        <!-- SVG M move <to x,y>
+        Q quadratic curve <control point x,y> <to x,y> -->
+        <div class="simon-game">
+            <table>
+                <tr>
+                    <td>
+                        <button>
+                            <svg
+                                aria-hidden="true"
+                                viewBox="0 0 100 100"
+                                height="100"
+                                width="100"
+                            >
+                            <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
+                            </svg>
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            <svg
+                                aria-hidden="true"
+                                viewBox="0 0 100 100"
+                                height="100"
+                                width="100"
+                            >
+                            <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>
+                            <svg
+                                aria-hidden="true"
+                                viewBox="0 0 100 100"
+                                height="100"
+                                width="100"
+                            >
+                            <path d="M 5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
+                            </svg>
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            <svg
+                                aria-hidden="true"
+                                viewBox="0 0 100 100"
+                                height="100"
+                                width="100"
+                            >
+                            <path d="M 95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <hr />
     </main>
     <footer>
-        <p>Cassidy Hardisty</p>
+        <span>Cassidy Hardisty</span>
+        <br />
         <a href="https://github.com/ch843/simon">GitHub</a>
     </footer>
 </body>
